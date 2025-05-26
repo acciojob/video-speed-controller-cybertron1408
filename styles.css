@@ -1,33 +1,48 @@
-
 body {
   margin: 0;
   background: #222;
   color: #fff;
+  font-family: sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: sans-serif;
 }
 
 .player {
   max-width: 750px;
   width: 100%;
-  overflow: hidden;
   background: #333;
   border-radius: 5px;
+  overflow: hidden;
 }
 
 .viewer {
   width: 100%;
-  max-height: 400px;
+  display: block;
 }
 
 .controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 10px;
   gap: 10px;
+  padding: 10px;
+}
+
+.progress {
+  flex: 1 1 100%;
+  height: 5px;
+  background: #555;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.progress__filled {
+  width: 0%;
+  height: 100%;
+  background: #f90;
+  flex: 0;
 }
 
 .player__button {
@@ -42,18 +57,4 @@ body {
 
 .player__slider {
   width: 100px;
-}
-
-.progress {
-  flex: 1;
-  height: 5px;
-  background: #555;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.progress__filled {
-  width: 0%;
-  height: 100%;
-  background: #f90;
 }
